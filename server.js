@@ -16,6 +16,10 @@ const __dirname = path.dirname(__filename);
 
 app.use(express.static(path.join(__dirname, "/dist")))
 
+app.get("/", (req, res)=>{
+    res.send("The Power of Human Connection")
+})
+
 app.listen(port, ()=>{
     console.log("Listening on port", port)
 })
